@@ -1,14 +1,17 @@
-FROM kitware/cmake:latest
+# Use buildpack-deps as a parent image
+FROM buildpack-deps:focal
 
-# Set environment variables
-ENV DEBIAN_FRONTEND=noninteractive
-
-# Install dependencies and run the script
+# Install dependencies
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-    qtbase5-dev \
-    qtdeclarative5-dev \
-    qml-module-qtquick-controls2
+        ca-certificates \
+        curl \
+        cmake \
+        qtbase5-dev \
+        qtdeclarative5-dev \
+        qml-module-qtquick-controls2 && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 # Set the working directory
 WORKDIR /app
@@ -18,10 +21,3 @@ COPY . /app
 
 # Run the application
 CMD ["./main"]
-
-# [Optional] Uncomment this section to install additional vcpkg ports.
-# RUN su vscode -c "${VCPKG_ROOT}/vcpkg install <your-port-name-here>"
-
-# [Optional] Uncomment this section to install additional packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
