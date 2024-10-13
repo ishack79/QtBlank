@@ -10,6 +10,7 @@ COPY .devcontainer/reinstall-cmake.sh /tmp/reinstall-cmake.sh
 # Install dependencies and run the script
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
+    curl \
     qtbase5-dev \
     qtdeclarative5-dev \
     qml-module-qtquick-controls2 && \
