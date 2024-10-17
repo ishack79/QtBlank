@@ -11,7 +11,7 @@
                 "/usr/include/x86_64-linux-gnu/qt5/QtQml"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/gcc",
+            "compilerPath": null,
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "linux-gcc-x64"

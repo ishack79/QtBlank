@@ -9,6 +9,8 @@ RUN apt-get update && \
         cmake \
         qtbase5-dev \
         qtdeclarative5-dev \
+        qml-module-qtquick2 \
+        qml-module-qtquick-window2 \
         qml-module-qtquick-controls2 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
