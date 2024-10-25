@@ -7,6 +7,8 @@ RUN apt-get update && \
         ca-certificates \
         curl \
         cmake \
+        gdb \
+        g++ \
         qtbase5-dev \
         qtdeclarative5-dev \
         qml-module-qtquick2 \

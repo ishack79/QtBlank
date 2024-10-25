@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Program",
+            "name": "Launch C++ Program",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/build/main",
@@ -22,7 +22,6 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build",
             "miDebuggerPath": "/usr/bin/gdb",
             "logging": {
                 "trace": true,

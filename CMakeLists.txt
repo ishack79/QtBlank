@@ -4,6 +4,9 @@ project(main)
 # Find the Qt5 package
 find_package(Qt5 COMPONENTS Widgets Qml Quick REQUIRED)
 
+set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
+
 set(SOURCES
     main.cpp
     resources.qrc
